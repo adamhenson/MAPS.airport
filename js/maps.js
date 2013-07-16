@@ -100,15 +100,16 @@ MAPS.airport = (function(){
 
 
 	function calculateDistances(destinationA, destinationB) {
-	var service = new google.maps.DistanceMatrixService();
-	service.getDistanceMatrix({
-		origins: [destinationA],
-		destinations: [destinationB],
-		travelMode: google.maps.TravelMode.DRIVING,
-		unitSystem: google.maps.UnitSystem.IMPERIAL,
-		avoidHighways: false,
-		avoidTolls: false
-	}, distanceCallback);}
+		var service = new google.maps.DistanceMatrixService();
+		service.getDistanceMatrix({
+			origins: [destinationA],
+			destinations: [destinationB],
+			travelMode: google.maps.TravelMode.DRIVING,
+			unitSystem: google.maps.UnitSystem.IMPERIAL,
+			avoidHighways: false,
+			avoidTolls: false
+		}, distanceCallback);
+	}
 
 	function distanceCallback(response, status) {
 		if (status != google.maps.DistanceMatrixStatus.OK) {
