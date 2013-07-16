@@ -1,6 +1,6 @@
 var MAPS = window.MAPS || [];
 
-MAPS.currentLocation = { // default location to NYC... we'll do the geolocation thing upon MAPS initialization
+MAPS.currentLocation = { // default location to NYC... we'll do the geolocation thing upon MAPS.airport initialization
 	lat: 40.714352999999996,
 	lng: -74.005973
 }
