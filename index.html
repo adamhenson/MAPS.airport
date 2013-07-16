@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<title>Airport to Airport</title>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkI2AMd2wHELJY4KNYSxqpAQ_7fsRkqvM&v=3.exp&sensor=true&libraries=places"></script>
+<script src="js/maps.js"></script>
+<style>
+	html, body { height: 100%; margin: 0; padding: 0; font-family:Arial, Helvetica, sans-serif; }
+	body { padding: 1em; }
+	#map-canvas { width:100%; height:60%; }
+	#airport-dist { color:#CCC; margin:auto; padding-top:0.5em; text-align:center; font-family:'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size:3.5em; text-shadow:0 -1px 0 rgba(0,0,0,0.3); }
+	body > form { padding-top:01em; }
+	body > form > div { max-width:500px; margin:0.2em auto; padding:0.5em; }
+	body > form input[type='text'] { width:96%; height:1.8em; line-height:1.8em; padding:0 2%; font-size:1em; border:#aba9a9 1px solid; -webkit-border-radius: 3px; border-radius: 3px; }
+</style>
+</head>
+<body>
+	<div id="map-canvas"></div>
+    <form>
+    	<div><input type="text" placeholder="from" id="airport-from" /></div>
+        <div><input type="text" placeholder="to" id="airport-to" /></div>
+        <div id="airport-dist"></div>
+    </form>
+</body>
+</html>
