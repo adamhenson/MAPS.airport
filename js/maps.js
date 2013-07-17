@@ -143,6 +143,9 @@ MAPS.airport = (function(){
 	
 	return {
 		init: function(){
+			directionsService = new google.maps.DirectionsService();
+			directionsDisplay = new google.maps.DirectionsRenderer();
+			input = [(document.getElementById('airport-from')), (document.getElementById('airport-to'))];	
 			// if HTML5 GeoLocation
 			if(navigator.geolocation.getCurrentPosition) {
 				navigator.geolocation.getCurrentPosition(function (position) {
@@ -153,9 +156,6 @@ MAPS.airport = (function(){
 			} else {
 				setUpMap(MAPS.currentLocation);
 			}
-			directionsService = new google.maps.DirectionsService();
-			directionsDisplay = new google.maps.DirectionsRenderer();
-			input = [(document.getElementById('airport-from')), (document.getElementById('airport-to'))];	
 		}
 		
 	};
